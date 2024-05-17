@@ -13,7 +13,7 @@ public class HypothekRechner {
         int years = scanner.nextInt();
 
         //Festlegung der einzelnen Rechenergebnissen
-        float r = ((float)percent / 100) / 12;
+        float r = ((float)percent / 100) / 12; //wir teilen durch 100, da wir Prozent haben und dann noch durch 12 wegen Monatsanzahl
         int months = years * 12;
         float x = 1+r;
         double y = (Math.round((Math.pow(x, (float)months))*10000))/(double)10000;
