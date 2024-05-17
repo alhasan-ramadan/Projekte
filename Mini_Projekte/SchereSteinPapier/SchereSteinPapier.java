@@ -36,37 +36,31 @@ public class SchereSteinPapier {
 
         //einzelne Fallunterscheidungen
 
-        if (spielerInput.equals("Schere")){
-            if (computerInput.equals("Schere")){
-                System.out.println("Unentschieden! Ihr habt beide Schere genommen!");
+        if (spielerInput.equals(computerInput)){
+            System.out.println("Unentschieden!");
+        }
+        else if (spielerInput.equals("Schere")){
+            if (computerInput.equals("Papier")){
+                System.out.println("Du hast gewonnen!");
             }
-            else if (computerInput.equals("Stein")){
-                System.out.println("Leider verloren! Der PC hat Stein gewählt und schlägt damit Schere! Versuche es gerne nochmal.");
-            }
-            else if(computerInput.equals("Papier")){
-                System.out.println("Du hast gewonnen! Der PC entschied sich für Papier und du schneidest Papier!");
+            else {
+                System.out.println("Du hast verloren!");
             }
         }
         else if (spielerInput.equals("Papier")){
             if (computerInput.equals("Schere")){
-                System.out.println("Leider verloren! Du wurdest mit Schere geschlagen!");
+                System.out.println("Du hast gewonnen!");
             }
-            else if (computerInput.equals("Stein")){
-                System.out.println("Du hast gewonnen! Papier wickelt sich um Stein!");
-            }
-            else if(computerInput.equals("Papier")){
-                System.out.println("Unentschieden! Ihr habt beide Papier gewählt!");
+            else {
+                System.out.println("Du hast verloren!");
             }
         }
-        else if (spielerInput.equals("Stein")){
+        else {
             if (computerInput.equals("Schere")){
-                System.out.println("Du hast gewonnen! Stein zerschlägt die Schere!");
+                System.out.println("Du hast gewonnen!");
             }
-            else if (computerInput.equals("Stein")){
-                System.out.println("Unentschieden! Ihr habt beide Stein ausgesucht!");
-            }
-            else if(computerInput.equals("Papier")){
-                System.out.println("Leider verloren! Der Computer entschied sich für Papier...");
+            else {
+                System.out.println("Du hast verloren!");
             }
         }
     }
