@@ -15,7 +15,6 @@ public class HypothekRechner {
         //Festlegung der einzelnen Rechenergebnissen
         float r = ((float)percent / 100) / 12;
         int months = years * 12;
-        float monatetest = (float)(months);
         float x = 1+r;
         double y = (Math.round((Math.pow(x, (float)months))*10000))/(double)10000;
         double monatszahlung = (Math.round(((double)(pricipal*((r*y)/(y-1))))*100))/(double)100;
